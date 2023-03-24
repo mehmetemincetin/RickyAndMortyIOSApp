@@ -17,9 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
        
 
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = RMTabBarViewController()
+        window?.rootViewController = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()
         window?.makeKeyAndVisible()
         
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+               self.window?.rootViewController = RMTabBarViewController()
+           }
         
     }
 

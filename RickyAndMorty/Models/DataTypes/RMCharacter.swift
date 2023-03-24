@@ -20,5 +20,4 @@ struct RMCharacter: Codable {
     let episode: [String]
     let url: String
     let created: String
-
 }
